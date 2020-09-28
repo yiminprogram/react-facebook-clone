@@ -45,9 +45,6 @@ const FeedType = styled.div`
 `;
 const NewsFeed = () => {
   const [isModal, setIsModal] = useState(false);
-  const close = () => {
-    setIsModal((isModal) => (isModal = false));
-  };
   return (
     <Feed>
       <FeedInput>
@@ -66,7 +63,7 @@ const NewsFeed = () => {
           感受/活動
         </BtnFeedType>
       </FeedType>
-      {isModal ? <NewsFeedModal close={close} /> : null}
+      {isModal ? <NewsFeedModal setIsModal={setIsModal} /> : null}
     </Feed>
   );
 };

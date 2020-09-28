@@ -92,11 +92,11 @@ const AddContent = styled.div`
     font-size: 0.8rem;
   }
 `;
-const NewsFeedModal = ({ close }) => {
+const NewsFeedModal = ({ setIsModal }) => {
   return (
     <Modal>
       <Form>
-        <BtnClose onClick={() => close()} />
+        <BtnClose onClick={() => setIsModal((isModal) => (isModal = false))} />
         <h1>建立貼文</h1>
         <hr />
         <User>
