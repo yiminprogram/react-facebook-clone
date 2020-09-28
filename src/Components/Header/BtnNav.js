@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
+  cursor: pointer;
   flex: 1;
   border: none;
   background-color: #fff;

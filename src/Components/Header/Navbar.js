@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { HomeOutlined, Home, People, PeopleOutline, VideoLibrary, VideoLibraryOutlined, Store, StoreOutlined, GroupWork, GroupWorkOutlined } from '@material-ui/icons';
-import BtnHome from './NavButton';
+import BtnHome from './BtnNav';
 
 const HeaderNavbar = styled.div`
   flex: 2;
