@@ -6,6 +6,7 @@ import BtnHome from './BtnNav';
 const HeaderNavbar = styled.div`
   flex: 2;
   display: flex;
+  margin: 0 1rem;
 `;
 
 const Navbar = () => {

@@ -13,6 +13,12 @@ const Main = () => {
     <MainDiv>
       <NewsFeed />
       <NewsFeedList />
+      <NewsFeedList />
+      <NewsFeedList />
+      <NewsFeedList />
+      <NewsFeedList />
+      <NewsFeedList />
+      <NewsFeedList />
     </MainDiv>
   );
 };
