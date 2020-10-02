@@ -8,15 +8,15 @@ import { red, blue, green } from '@material-ui/core/colors';
 const Feed = styled.div`
   padding: 0.5rem;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #ddd;
 
-  hr {
+  > hr {
     width: 100%;
+    height: 2px;
     background-color: #edeef1;
     color: #edeef1;
     border-width: 0;
-    height: 1px;
   }
 `;
 const FeedInput = styled.div`

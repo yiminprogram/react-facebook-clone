@@ -12,6 +12,10 @@ const SidebarDiv = styled.div`
   left: 0;
   width: 25%;
   overflow-y: auto;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 const Sidebar = () => {
   const [isHidden, setisHidden] = useState(false);

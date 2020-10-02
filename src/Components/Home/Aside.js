@@ -8,6 +8,10 @@ const AsideDiv = styled.div`
   top: 80px;
   right: 0;
   margin-right: 1rem;
+
+  @media screen and (max-width: 960px) {
+    display: none;
+  }
 `;
 
 const AsideTitle = styled.div`

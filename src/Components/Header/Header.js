@@ -9,7 +9,7 @@ const FBHeader = styled.header`
   height: 60px;
   position: fixed;
   background-color: #fff;
-  box-shadow: 0 0 10px 5px #ddd;
+  box-shadow: 0 0 10px 5px #e1e1e1;
   margin-bottom: 1rem;
   z-index: 1;
 

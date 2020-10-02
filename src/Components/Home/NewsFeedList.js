@@ -3,13 +3,23 @@ import styled from 'styled-components';
 import Photo from '../../image/user-photo.png';
 import BtnStatus from './BtnStatus';
 import { ThumbUpOutlined, ChatBubbleOutlineOutlined, ShareOutlined } from '@material-ui/icons';
+import { blue, orange, green } from '@material-ui/core/colors';
 
 const List = styled.div`
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 0.6rem 1rem 0 1rem;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 0 0 10px #ddd;
+
+  > hr {
+    width: 100%;
+    height: 2px;
+    margin: 0;
+    background-color: #edeef1;
+    color: #edeef1;
+    border-width: 0;
+  }
 `;
 const Title = styled.div`
   display: flex;
@@ -36,6 +46,22 @@ const Status = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5rem;
+
+  > button {
+    cursor: pointer;
+    color: #6d6f73;
+    background-color: #fff;
+    border: none;
+    font-size: 0.8rem;
+  }
+  .status-btn {
+    display: flex;
+    align-items: center;
+
+    > span {
+      margin-left: 0.3rem;
+    }
+  }
 `;
 const BtnDiv = styled.div`
   display: flex;
@@ -56,14 +82,23 @@ const NewsFeedList = () => {
         </p>
       </Content>
       <Status>
-        <button>100</button>
+        <button className="status-btn">
+          <ThumbUpOutlined style={{ color: blue[500], fontSize: 20 }} />
+          <span>100</span>
+        </button>
         <button>10則留言，6次分享</button>
       </Status>
       <hr />
       <BtnDiv>
-        <BtnStatus Icon={ThumbUpOutlined}>讚</BtnStatus>
-        <BtnStatus Icon={ChatBubbleOutlineOutlined}>留言</BtnStatus>
-        <BtnStatus Icon={ShareOutlined}>分享</BtnStatus>
+        <BtnStatus Icon={ThumbUpOutlined} Color={{ color: blue[500], fontSize: 25 }}>
+          讚
+        </BtnStatus>
+        <BtnStatus Icon={ChatBubbleOutlineOutlined} Color={{ color: orange[500], fontSize: 25 }}>
+          留言
+        </BtnStatus>
+        <BtnStatus Icon={ShareOutlined} Color={{ color: green[500], fontSize: 25 }}>
+          分享
+        </BtnStatus>
       </BtnDiv>
     </List>
   );

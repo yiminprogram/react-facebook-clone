@@ -6,6 +6,9 @@ import NewsFeedList from './NewsFeedList';
 const MainDiv = styled.div`
   width: 45%;
   margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    width: 90%;
+  }
 `;
 
 const Main = () => {

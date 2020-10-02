@@ -4,7 +4,7 @@ import { Forum, Cloud, Restore, SportsEsports, Event } from '@material-ui/icons'
 import BtnSidebar from './BtnSidebar';
 
 const HiddenDiv = styled.div`
-  max-height: ${(props) => (props.isHidden ? 'auto' : 0)};
+  max-height: ${(props) => (props.isHidden ? '350px' : 0)};
   overflow: hidden;
   transition: 0.5s;
 `;

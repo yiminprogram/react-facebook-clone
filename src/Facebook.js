@@ -1,7 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Switch, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Home from './Home';
+import Friends from './Friends';
+import Video from './Video';
+import Shop from './Shop';
+import Group from './Group';
 
 const FacebookPage = styled.div`
   min-height: 100vh;
@@ -12,7 +17,13 @@ const Facebook = () => {
   return (
     <FacebookPage>
       <Header />
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/friends" component={Friends} />
+        <Route path="/video" component={Video} />
+        <Route path="/shop" component={Shop} />
+        <Route path="/group" component={Group} />
+      </Switch>
     </FacebookPage>
   );
 };

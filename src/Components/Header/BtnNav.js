@@ -1,28 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+import ToolTip from '@material-ui/core/Tooltip';
 
-const Button = styled.button`
+const BtnList = styled.li`
   cursor: pointer;
   flex: 1;
   border: none;
   background-color: #fff;
+`;
+const NavLink = styled(Link)`
+  color: #67696d;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &:hover {
-    border-bottom: 3px solid #3579ea;
+    color: #3579ea;
   }
 `;
-
-const NavButton = ({ Fill, Outline }) => {
-  const [mouseIn, setMouseIn] = useState(false);
-  const inButton = () => {
-    setMouseIn(true);
-  };
-  const outButton = () => {
-    setMouseIn(false);
-  };
+const NavButton = ({ Icon, Path, Title, setCurrent }) => {
   return (
-    <Button onMouseEnter={inButton} onMouseLeave={outButton}>
-      {mouseIn ? <Fill style={{ color: '#3579ea' }} /> : <Outline style={{ color: '#87898c' }} />}
-    </Button>
+    <BtnList>
+      <ToolTip title={Title}>
+        <NavLink to={Path} replace onClick={() => setCurrent((current) => (current = Title))}>
+          <Icon />
+        </NavLink>
+      </ToolTip>
+    </BtnList>
   );
 };
 
