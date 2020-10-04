@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import UserPhoto from '../../image/user-photo.png';
 import BtnInfo from './BtnInfo';
 import { Forum, Notifications, ArrowDropDown } from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 const HeaderInfo = styled.div`
   flex: 1;
@@ -11,7 +12,7 @@ const HeaderInfo = styled.div`
   align-items: center;
 `;
 
-const User = styled.button`
+const User = styled(Link)`
   cursor: pointer;
   display: flex;
   justify-content: space-around;
@@ -19,6 +20,8 @@ const User = styled.button`
   border-radius: 30px;
   border: none;
   padding: 0.3rem;
+  color: #000;
+  text-decoration: none;
   background-color: #fff;
 
   &:hover {
@@ -41,7 +44,7 @@ const Icon = styled.div`
 const Info = () => {
   return (
     <HeaderInfo>
-      <User>
+      <User to="/profile">
         <img src={UserPhoto} alt="error" />
         <span>yimin</span>
       </User>

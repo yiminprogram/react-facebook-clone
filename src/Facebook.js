@@ -7,6 +7,7 @@ import Friends from './Friends';
 import Video from './Video';
 import Shop from './Shop';
 import Group from './Group';
+import Profile from './Profile';
 
 const FacebookPage = styled.div`
   min-height: 100vh;
@@ -23,6 +24,7 @@ const Facebook = () => {
         <Route path="/video" component={Video} />
         <Route path="/shop" component={Shop} />
         <Route path="/group" component={Group} />
+        <Route path="/profile" component={Profile} />
       </Switch>
     </FacebookPage>
   );

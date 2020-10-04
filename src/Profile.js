@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import TopDiv from './Components/Profile/TopDiv';
 const ProfilePage = styled.div`
   width: 100%;
-  padding-top: 80px;
+  padding-top: 60px;
 `;
+
 const Profile = () => {
   return (
     <ProfilePage>
-      <h1>🚧this is profile page🚧</h1>
+      <TopDiv />
     </ProfilePage>
   );
 };
